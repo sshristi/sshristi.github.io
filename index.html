@@ -2,9 +2,27 @@
 <html>
 
 <head>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>SHRISTI SINGH</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot machine</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/slotmachine.css">
+    <link rel="stylesheet" href="./css/jquery.slotmachine.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/slotmachine.js"></script>
+    <script src="./js/jquery.slotmachine.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             margin: 0 3% !important;
             font-family: sans-serif;
@@ -12,43 +30,86 @@
         
         .bannerWrapper {
             position: relative;
-            height: 700px;
+            /* background-color: #202222; */
+            width: 100%;
         }
-        p{
-          width:100%;
-          text-align:center;
+        
+        .imgWrapper {
+            padding: 3% 25% 1% 25%;
         }
-        .Finally-you-can-pic {
-            padding: 5% 25% 10% 25%;
-            background-color: #3590ac;
-            font-family: GTWalsheim-Bd;
-            font-size: 42px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.07;
-            letter-spacing: normal;
+        
+        .profileimage {
+            width: 22%;
+            /* height: 23%; */
+            border: 4px solid #c0c0c0;
+            border-radius: 105px;
+            box-shadow: 0px 0px 30px 15px #000000;
+        }
+        
+        p {
+            width: 100%;
             text-align: center;
-            color: #ffeccd;
-            height:100%;
+        }
+        
+        .header {
+            background-color: #20222F;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .nametitle {
+            font-family: sans-serif;
+            font-size: 42px;
+            line-height: 1.07;
+            letter-spacing: unset;
+            text-align: center;
+            color: #c0c0c0;
+        }
+        
+        .desigtxt {
+            font-family: sans-serif;
+            font-size: 20px;
+            color: #777676;
+        }
+        
+        .uidesignbutton {
+            text-decoration: none;
+            border: 2px solid #c0c0c0;
+            padding: 12px;
+            font-size: 14px;
+            color: #c0c0c0;
+        }
+        
+        .designbuttonwrapper {
+            position: relative;
+            padding: 3%;
         }
         
         @media only screen and (max-width: 768px) {
             body {
                 margin: 0 !important;
             }
-            .Finally-you-can-pic {
-                padding: 0;
-                background-color: #3590ac;
-                font-family: GTWalsheim-Bd;
-                font-size: 34px;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.24;
-                letter-spacing: normal;
-                text-align: center;
-                color: #ffeccd;
+            .nametitle {
+                font-size: 30px;
+            }
+            .desigtxt {
+                font-size: 17px;
+            }
+            .designbuttonwrapper {
+                position: relative;
+                padding: 5%;
+            }
+            .profileimage {
+                width: 50%;
+                /* height: 23%; */
+                border: 2px solid #c0c0c0;
+                box-shadow: 0px 0px 21px 10px #000000;
+            }
+            .uidesignbutton {
+                text-decoration: none;
+                border: 1px solid #c0c0c0;
+                padding: 6px;
+                font-size: 10px;
             }
         }
     </style>
@@ -57,16 +118,238 @@
 <body>
 
     <div class="bannerWrapper">
-        <div class="Finally-you-can-pic">
-            <h2>Hey! First project.</h2>
-            <p>-shristi singh</p>
-            <a href="#slotmachine">SLOT MACHINE</a>
+        <div class="header">
+            <div class="imgWrapper">
+                <img src="https://avatars.githubusercontent.com/u/42529772?s=400&u=41c61edd774b5495e1667a890520df37160cb058&v=4" class="profileimage" />
+            </div>
+            <h2 class="nametitle">SHRISTI SINGH</h2>
+            <p class="desigtxt">Full stack developer</p>
+            <div class="designbuttonwrapper">
+                <a class="uidesignbutton" href="#slotmachine">SLOT MACHINE</a>
+            </div>
         </div>
         <div id="slotmachine">
-            <p>slot machine</p>
+            <h2 class="nametitle" style="color:#20222F">SLOT MACHINE</h2>
+            <p>Find the code at:
+                <a></a>
+            </p>
+            <div id="randomize">
+                <div class="container">
+                    <div class="row">
+                        <div id="overlay" class="slotoverlay">
+                            <p id="text">EXPLORE THIS SLOT MACHINE. USE REFRESH BUTTONS OR THE UP & DOWN ARROW IN THE NEXT SCREEN</p>
+                            <!-- <button>Turn off overlay effect</button> -->
+                            <button id="randomizeButton" type="button" class="shuffleAllButton" onclick="off()">CLICK TO SHUFFLE ALL</button>
+                        </div>
+                        <div class="col-sm-4 m1">
+                            <div class="machineResult main"><a href="/products#mainVarient" style="text-decoration: none; color:#ffeccd;">PICK A MAIN</a></div>
+                            <div>
+                                <div id="machine1" class="randomizeMachine">
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908734506_1545003078/img-1.jpg" alt="mains image 1" class="slotimages" /></div>
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908758192_1549437871/img-4.jpg" alt="mains image 2" class="slotimages" /></div>
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908776647_539309839/img-7.jpg" alt="mains image 3" class="slotimages" /></div>
+                                </div>
+                            </div>
+                            <div id="machine1Result" class="col-xs-4 machineResult machine1Result main">
+                                <button id="watchBtnPrev1" class="arrowhead refreshButton" aria-label="go down"><i class="fa fa-angle-down"></i></button>
+                                <button id="randomizeButton1" type="button" class="refreshButton" aria-label="refresh mains"><i class="fa fa-refresh slotrefresh"></i></button>
+                                <button id="watchBtnNext1" class="arrowhead refreshButton" aria-label="go up"><i class="fa fa-angle-up"></i></button>
+                            </div>
+                            <div id="n1" class="col-xs-4 name1Result">
+                                <p id="name1Result" class="nameResult"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 m2">
+
+                            <div class="machineResult veggie"><a href="/products#veggieVarient" style="text-decoration: none;color:#ffeccd;">PICK A VEGGIE</a></div>
+
+                            <div>
+                                <div id="machine2" class="randomizeMachine">
+
+
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908811316_882004464/img-2.jpg" alt="veggie image 1" class="slotimages" /></div>
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908830811_1185491219/img-5.jpg" alt="veggie image 2" class="slotimages" /></div>
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908859331_499983559/img-8.jpg" alt="veggie image 3" class="slotimages" /></div>
+                                </div>
+                            </div>
+                            <div id="machine2Result" class="col-xs-4 machineResult machine2Result veggie">
+                                <button id="watchBtnPrev2" class="arrowhead refreshButton" aria-label="go down"><i class="fa fa-angle-down"></i></button>
+                                <button id="randomizeButton2" type="button" class="refreshButton" aria-label="refresh veggies"><i class="fa fa-refresh slotrefresh"></i></button>
+                                <button id="watchBtnNext2" class="arrowhead refreshButton" aria-label="go up"><i class="fa fa-angle-up"></i></button>
+                            </div>
+                            <div id="n2" class="col-xs-4 name2Result">
+                                <p id="name2Result" class="nameResult"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 m3">
+
+                            <div class="machineResult side"><a href="/products#sideVarient" style="text-decoration: none;color:#ffeccd;">PICK A SIDE</a></div>
+
+                            <div>
+                                <div id="machine3" class="randomizeMachine">
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908876975_603037440/img-3.jpg" alt="side image 1" class="slotimages" /></div>
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908894995_1307602130/img-6.jpg" alt="side image 2" class="slotimages" /></div>
+                                    <div><img src="https://d2ozwg77fjfk77.cloudfront.net/293/studio/assets/v1617908921880_1504538473/img-9.jpg" alt="side image 3" class="slotimages" /></div>
+
+                                </div>
+                            </div>
+                            <div id="machine3Result" class="col-xs-4 machineResult machine3Result side">
+                                <button id="watchBtnPrev3" class="arrowhead refreshButton" aria-label="go down"><i class="fa fa-angle-down"></i></button>
+                                <button id="randomizeButton3" type="button" class="refreshButton" aria-label="refresh sides"><i class="fa fa-refresh slotrefresh"></i></button>
+                                <button id="watchBtnNext3" class="arrowhead refreshButton" aria-label="go up"><i class="fa fa-angle-up"></i></button>
+                            </div>
+                            <div id="n3" class="col-xs-4 name3Result">
+                                <p id="name3Result" class="nameResult"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="machineResult" class=""></div>
+                </div>
+            </div>
         </div>
-        
     </div>
 
 </body>
+<script id="codeScript2">
+    const btn = document.querySelector('#randomizeButton');
+    const btn1 = document.querySelector('#randomizeButton1');
+    const btn2 = document.querySelector('#randomizeButton2');
+    const btn3 = document.querySelector('#randomizeButton3');
+    const results = {
+        machine1: document.querySelector('#name1Result'),
+        machine2: document.querySelector('#name2Result'),
+        machine3: document.querySelector('#name3Result')
+    };
+    const el1 = document.querySelector('#machine1');
+    const el2 = document.querySelector('#machine2');
+    const el3 = document.querySelector('#machine3');
+    const machine1 = new SlotMachine(el1, {
+        active: 0
+    });
+    const machine2 = new SlotMachine(el2, {
+        active: 0
+    });
+    const machine3 = new SlotMachine(el3, {
+        active: 0
+    });
+
+    function onComplete(active) {
+        randomizeButton1.classList.remove("fa-spin");
+        randomizeButton2.classList.remove("fa-spin");
+        randomizeButton3.classList.remove("fa-spin");
+        n1.style.display = "flex";
+        n2.style.display = "flex";
+        n3.style.display = "flex";
+        if (active == 0) {
+            if (this.element.id == "machine1")
+                results[this.element.id].innerText = 'Tender chicken in a sweet BBQ sauce';
+            else if (this.element.id == "machine2")
+                results[this.element.id].innerText = 'Cheesy Broccoli';
+            else if (this.element.id == "machine3")
+                results[this.element.id].innerText = 'Homestyle Mac & Cheese';
+        } else if (active == 1) {
+            if (this.element.id == "machine1")
+                results[this.element.id].innerText = 'Pulled Pork with BBQ Sauce';
+            else if (this.element.id == "machine2")
+                results[this.element.id].innerText = 'Italian Style Cauliflower';
+            else if (this.element.id == "machine3")
+                results[this.element.id].innerText = 'Loaded Scalloped Potatoes';
+        } else if (active == 2) {
+            if (this.element.id == "machine1")
+                results[this.element.id].innerText = 'Italian Style Meatballs in Marinara Sauce';
+            else if (this.element.id == "machine2")
+                results[this.element.id].innerText = 'Green Bean Casserole';
+            else if (this.element.id == "machine3")
+                results[this.element.id].innerText = 'Cheesy Herb BreadSticks';
+        }
+    }
+
+    function onCompleteForPrevNextButton(id, active) {
+
+
+        if (active == 0) {
+            if (id == "name1Result")
+                document.getElementById(id).innerText = 'Tender chicken in a sweet BBQ sauce';
+            else if (id == "name2Result")
+                document.getElementById(id).innerText = 'Cheesy Broccoli';
+            else if (id == "name3Result")
+                document.getElementById(id).innerText = 'Homestyle Mac & Cheese';
+        } else if (active == 1) {
+            if (id == "name1Result")
+                document.getElementById(id).innerText = 'Pulled Pork with BBQ Sauce';
+            else if (id == "name2Result")
+                document.getElementById(id).innerText = 'Italian Style Cauliflower';
+            else if (id == "name3Result")
+                document.getElementById(id).innerText = 'Loaded Scalloped Potatoes';
+        } else if (active == 2) {
+            if (id == "name1Result")
+                document.getElementById(id).innerText = 'Italian Style Meatballs in Marinara Sauce';
+            else if (id == "name2Result")
+                document.getElementById(id).innerText = 'Green Bean Casserole';
+            else if (id == "name3Result")
+                document.getElementById(id).innerText = 'Cheesy Herb BreadSticks';
+
+        }
+    }
+    btn.addEventListener('click', () => {
+        machine1.shuffle(5, onComplete);
+        machine2.shuffle(5, onComplete);
+        machine3.shuffle(5, onComplete);
+    });
+    btn1.addEventListener('click', () => {
+        machine1.shuffle(5, onComplete);
+        randomizeButton1.classList.add("fa-spin");
+    });
+    btn2.addEventListener('click', () => {
+        machine2.shuffle(5, onComplete);
+        randomizeButton2.classList.add("fa-spin");
+    });
+    btn3.addEventListener('click', () => {
+        machine3.shuffle(5, onComplete);
+        randomizeButton3.classList.add("fa-spin");
+    });
+    const btnNext1 = document.querySelector('#watchBtnNext1');
+    const btnPrev1 = document.querySelector('#watchBtnPrev1');
+    btnPrev1.addEventListener('click', () => {
+        machine1.prev();
+        onCompleteForPrevNextButton("name1Result", machine1.active);
+    });
+    btnNext1.addEventListener('click', () => {
+        machine1.next();
+        onCompleteForPrevNextButton("name1Result", machine1.active);
+    });
+
+    const btnNext2 = document.querySelector('#watchBtnNext2');
+    const btnPrev2 = document.querySelector('#watchBtnPrev2');
+    btnPrev2.addEventListener('click', () => {
+        machine2.prev();
+        onCompleteForPrevNextButton("name2Result", machine2.active);
+    });
+    btnNext2.addEventListener('click', () => {
+        machine2.next();
+        onCompleteForPrevNextButton("name2Result", machine2.active);
+    });
+
+    const btnNext3 = document.querySelector('#watchBtnNext3');
+    const btnPrev3 = document.querySelector('#watchBtnPrev3');
+    btnPrev3.addEventListener('click', () => {
+        machine3.prev();
+        onCompleteForPrevNextButton("name3Result", machine3.active);
+    });
+    btnNext3.addEventListener('click', () => {
+        machine3.next();
+        onCompleteForPrevNextButton("name3Result", machine3.active);
+    });
+
+    function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function off() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
 </html>
