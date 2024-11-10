@@ -1,0 +1,228 @@
+<html>
+    <body>
+        <div id="javascript">
+
+            <!--            <p>Find the code at:-->
+            <!--                <a></a>-->
+            <!--            </p>-->
+
+            <div id="randomize">
+                <h1>JAVASCRIPT PROJECTS</h1>
+                <div class="container" style="background-color: antiquewhite;">
+                    <h3 style="color:brown;padding:1rem">SLOT MACHINE</h3>
+                    <div class="row" style="margin:0">
+                        <div id="overlay" class="slotoverlay">
+                            <p id="text">EXPLORE THIS SLOT MACHINE. USE REFRESH BUTTONS OR THE UP & DOWN ARROW IN THE NEXT SCREEN</p>
+                            <!-- <button>Turn off overlay effect</button> -->
+                            <button id="randomizeButton" type="button" class="shuffleAllButton" onclick="off()">CLICK TO SHUFFLE ALL</button>
+                        </div>
+                        <div class="col-sm-4 m1">
+                            <div class="machineResult main"><span style="text-decoration: none; color:#FFF;">CLIENT SIDE</span></div>
+                            <div>
+                                <div id="machine1" class="randomizeMachine">
+                                    <div><img src="./img/angular.png" alt="angular image" class="slotimages" /></div>
+                                    <div><img src="./img/react.png" alt="react image" class="slotimages" /></div>
+                                    <div><img src="./img/vue.png" alt="vue js image" class="slotimages" /></div>
+                                </div>
+                            </div>
+                            <div id="machine1Result" class="col-xs-4 machineResult machine1Result main">
+                                <button id="watchBtnPrev1" class="arrowhead refreshButton" aria-label="go down"><i class="fa fa-angle-down"></i></button>
+                                <button id="randomizeButton1" type="button" class="refreshButton" aria-label="refresh"><i class="fa fa-refresh slotrefresh"></i></button>
+                                <button id="watchBtnNext1" class="arrowhead refreshButton" aria-label="go up"><i class="fa fa-angle-up"></i></button>
+                            </div>
+                            <div id="n1" class="col-xs-4 name1Result">
+                                <p id="name1Result" class="nameResult"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 m2">
+
+                            <div class="machineResult veggie"><span style="text-decoration: none;color:#FFF;">SERVER SIDE</span></div>
+
+                            <div>
+                                <div id="machine2" class="randomizeMachine">
+
+
+                                    <div><img src="./img/java.png" alt="java image" class="slotimages" /></div>
+                                    <div><img src="./img/python.png" alt="python image" class="slotimages" /></div>
+                                    <div><img src="./img/JS.png" alt="Java script image" class="slotimages" /></div>
+                                </div>
+                            </div>
+                            <div id="machine2Result" class="col-xs-4 machineResult machine2Result veggie">
+                                <button id="watchBtnPrev2" class="arrowhead refreshButton" aria-label="go down"><i class="fa fa-angle-down"></i></button>
+                                <button id="randomizeButton2" type="button" class="refreshButton" aria-label="refresh"><i class="fa fa-refresh slotrefresh"></i></button>
+                                <button id="watchBtnNext2" class="arrowhead refreshButton" aria-label="go up"><i class="fa fa-angle-up"></i></button>
+                            </div>
+                            <div id="n2" class="col-xs-4 name2Result">
+                                <p id="name2Result" class="nameResult"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 m3">
+
+                            <div class="machineResult side"><span style="text-decoration: none;color:#FFF;">DATABASE</span></div>
+
+                            <div>
+                                <div id="machine3" class="randomizeMachine">
+                                    <div><img src="./img/mongo.png" alt="mongo image" class="slotimages" /></div>
+                                    <div><img src="./img/mysql.png" alt="mysql image" class="slotimages" /></div>
+                                    <div><img src="./img/oracle.png" alt="oracle image" class="slotimages" /></div>
+
+                                </div>
+                            </div>
+                            <div id="machine3Result" class="col-xs-4 machineResult machine3Result side">
+                                <button id="watchBtnPrev3" class="arrowhead refreshButton" aria-label="go down"><i class="fa fa-angle-down"></i></button>
+                                <button id="randomizeButton3" type="button" class="refreshButton" aria-label="refresh"><i class="fa fa-refresh slotrefresh"></i></button>
+                                <button id="watchBtnNext3" class="arrowhead refreshButton" aria-label="go up"><i class="fa fa-angle-up"></i></button>
+                            </div>
+                            <div id="n3" class="col-xs-4 name3Result">
+                                <p id="name3Result" class="nameResult"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="machineResult" class=""></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+<script id="codeScript2">
+    const btn = document.querySelector('#randomizeButton');
+    const btn1 = document.querySelector('#randomizeButton1');
+    const btn2 = document.querySelector('#randomizeButton2');
+    const btn3 = document.querySelector('#randomizeButton3');
+    const results = {
+        machine1: document.querySelector('#name1Result'),
+        machine2: document.querySelector('#name2Result'),
+        machine3: document.querySelector('#name3Result')
+    };
+    const el1 = document.querySelector('#machine1');
+    const el2 = document.querySelector('#machine2');
+    const el3 = document.querySelector('#machine3');
+    const machine1 = new SlotMachine(el1, {
+        active: 0
+    });
+    const machine2 = new SlotMachine(el2, {
+        active: 0
+    });
+    const machine3 = new SlotMachine(el3, {
+        active: 0
+    });
+
+    function onComplete(active) {
+        randomizeButton1.classList.remove("fa-spin");
+        randomizeButton2.classList.remove("fa-spin");
+        randomizeButton3.classList.remove("fa-spin");
+        n1.style.display = "flex";
+        n2.style.display = "flex";
+        n3.style.display = "flex";
+        if (active == 0) {
+            if (this.element.id == "machine1")
+                results[this.element.id].innerText = 'ANGULAR';
+            else if (this.element.id == "machine2")
+                results[this.element.id].innerText = 'JAVA';
+            else if (this.element.id == "machine3")
+                results[this.element.id].innerText = 'MongoDB';
+        } else if (active == 1) {
+            if (this.element.id == "machine1")
+                results[this.element.id].innerText = 'REACT';
+            else if (this.element.id == "machine2")
+                results[this.element.id].innerText = 'PYTHON';
+            else if (this.element.id == "machine3")
+                results[this.element.id].innerText = 'MySQL';
+        } else if (active == 2) {
+            if (this.element.id == "machine1")
+                results[this.element.id].innerText = 'VUE JS';
+            else if (this.element.id == "machine2")
+                results[this.element.id].innerText = 'JAVASCRIPT';
+            else if (this.element.id == "machine3")
+                results[this.element.id].innerText = 'ORACLE';
+        }
+    }
+
+    function onCompleteForPrevNextButton(id, active) {
+
+
+        if (active == 0) {
+            if (id == "name1Result")
+                document.getElementById(id).innerText = 'ANGULAR';
+            else if (id == "name2Result")
+                document.getElementById(id).innerText = 'JAVA';
+            else if (id == "name3Result")
+                document.getElementById(id).innerText = 'MongoDB';
+        } else if (active == 1) {
+            if (id == "name1Result")
+                document.getElementById(id).innerText = 'REACT';
+            else if (id == "name2Result")
+                document.getElementById(id).innerText = 'PYTHON';
+            else if (id == "name3Result")
+                document.getElementById(id).innerText = 'MySQL';
+        } else if (active == 2) {
+            if (id == "name1Result")
+                document.getElementById(id).innerText = 'VUE JS';
+            else if (id == "name2Result")
+                document.getElementById(id).innerText = 'JAVASCRIPT';
+            else if (id == "name3Result")
+                document.getElementById(id).innerText = 'ORACLE';
+
+        }
+    }
+    btn.addEventListener('click', () => {
+        machine1.shuffle(5, onComplete);
+        machine2.shuffle(5, onComplete);
+        machine3.shuffle(5, onComplete);
+    });
+    btn1.addEventListener('click', () => {
+        machine1.shuffle(5, onComplete);
+        randomizeButton1.classList.add("fa-spin");
+    });
+    btn2.addEventListener('click', () => {
+        machine2.shuffle(5, onComplete);
+        randomizeButton2.classList.add("fa-spin");
+    });
+    btn3.addEventListener('click', () => {
+        machine3.shuffle(5, onComplete);
+        randomizeButton3.classList.add("fa-spin");
+    });
+    const btnNext1 = document.querySelector('#watchBtnNext1');
+    const btnPrev1 = document.querySelector('#watchBtnPrev1');
+    btnPrev1.addEventListener('click', () => {
+        machine1.prev();
+        onCompleteForPrevNextButton("name1Result", machine1.active);
+    });
+    btnNext1.addEventListener('click', () => {
+        machine1.next();
+        onCompleteForPrevNextButton("name1Result", machine1.active);
+    });
+
+    const btnNext2 = document.querySelector('#watchBtnNext2');
+    const btnPrev2 = document.querySelector('#watchBtnPrev2');
+    btnPrev2.addEventListener('click', () => {
+        machine2.prev();
+        onCompleteForPrevNextButton("name2Result", machine2.active);
+    });
+    btnNext2.addEventListener('click', () => {
+        machine2.next();
+        onCompleteForPrevNextButton("name2Result", machine2.active);
+    });
+
+    const btnNext3 = document.querySelector('#watchBtnNext3');
+    const btnPrev3 = document.querySelector('#watchBtnPrev3');
+    btnPrev3.addEventListener('click', () => {
+        machine3.prev();
+        onCompleteForPrevNextButton("name3Result", machine3.active);
+    });
+    btnNext3.addEventListener('click', () => {
+        machine3.next();
+        onCompleteForPrevNextButton("name3Result", machine3.active);
+    });
+
+    function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function off() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+</html>
